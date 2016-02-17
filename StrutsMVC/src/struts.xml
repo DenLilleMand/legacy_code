@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    
+    <struts>
+    	<!-- den næste linje her sørger for at vi ikke for en fil på 1000 linjer -->
+    	<include file="login.xml"/>
+    	
+    	
+    	<package name="default" namespace="/tutorials" extends="struts-default">
+    			<action name="*" class="org.denlillemand.action.TutorialAction" method="{1}">
+    					<result name="success"> /success.jsp</result>
+    					<result name="failure"> /failure.jsp</result>
+    		 	</action>
+    	</package>
+    	
+    	
+    	<package name="search" namespace="/" extends="struts-default">
+    			<action name="searchForm">
+    					<result> /searchForm.jsp</result>
+    					
+   
+    		 	</action>
+    	</package>
+    
+    
+    
+    </struts>

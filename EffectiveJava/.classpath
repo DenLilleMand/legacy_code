@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="ClassesAndInterfaces"/>
+	<classpathentry kind="src" path="CreatingAndDestroyingObjects"/>
+	<classpathentry kind="src" path="EnumsAndAnnotations"/>
+	<classpathentry kind="src" path="Exceptions"/>
+	<classpathentry kind="src" path="Generics"/>
+	<classpathentry kind="src" path="GeneralProgramming"/>
+	<classpathentry kind="src" path="Methods"/>
+	<classpathentry kind="src" path="MethodsCommonToAllObjects"/>
+	<classpathentry kind="src" path="Concurrency"/>
+	<classpathentry kind="src" path="Serialization"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

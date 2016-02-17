@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0/EN" "http://springframework.org/dtd/spring-beans-2.0.dtd">
+
+<!-- okay jeg har ingen anelse om hvorfor dette ikke fungerer, jeg kan ikke se fejlen lige nu. -->
+<beans>
+	<bean id="triangle" class="tutorial10BeanAutowiring.Triangle" autowire="byType">
+<!--<bean id="triangle" class="tutorial10BeanAutowiring.Triangle" autowire="byName">-->
+<!--<bean id="triangle" class="tutorial10BeanAutowiring.Triangle" autowire="constructor">-->
+	</bean>
+	
+	<bean id="pointA" class="tutorial7InjectingObjects.Point">
+		<property name="x" value="0" />
+		<property name="y" value ="0" />
+	</bean>
+	
+	<bean id="pointB" class="tutorial7InjectingObjects.Point">
+		<property name="x" value="-20" />
+		<property name="y" value ="0" />
+	</bean>
+	
+	<bean id="pointC" class="tutorial7InjectingObjects.Point">
+		<property name="x" value="20" />
+		<property name="y" value ="0" />
+	</bean>
+	
+	
+</beans>

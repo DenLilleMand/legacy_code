@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="550.0" prefWidth="687.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.denlillemand.javabrains.eventHandlingController.MainGUIController">
+   <children>
+      <TitledPane animated="false" layoutX="1.0" layoutY="1.0" prefHeight="550.0" prefWidth="687.0" text="SHOPAHOLIC" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="productsTab" text="Products">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="-2.0" layoutY="4.0" prefHeight="491.0" prefWidth="687.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label fx:id="nameLabel" prefHeight="17.0" prefWidth="109.0" text="Name:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="nameField" prefHeight="25.0" prefWidth="121.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin></TextField>
+                                    <Label fx:id="priceLabel" prefHeight="17.0" prefWidth="100.0" text="Max. Price:" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="priceField" prefHeight="25.0" prefWidth="82.0" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets right="5.0" />
+                                       </GridPane.margin></TextField>
+                                    <ScrollPane fx:id="productTablePane" prefHeight="45.0" prefWidth="266.0" GridPane.columnIndex="2" GridPane.columnSpan="8" GridPane.rowIndex="2" GridPane.rowSpan="6">
+                                       <content>
+                                          <TableView fx:id="productTable" prefHeight="267.0" prefWidth="454.0">
+                                            <columns>
+                                              <TableColumn fx:id="productIdColumn" prefWidth="68.0" text="ProductId" />
+                                              <TableColumn fx:id="productNameColumn" prefWidth="155.0" text="Name" />
+                                                <TableColumn fx:id="productPriceColumn" prefWidth="81.0" text="Price" />
+                                                <TableColumn fx:id="productQuantityColumn" prefWidth="149.0" text="Quantity" />
+                                            </columns>
+                                          </TableView>
+                                       </content>
+                                    </ScrollPane>
+                                    <Button fx:id="editButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="131.0" text="Edit" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+                                    <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Delete" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+                                    <Button fx:id="searchButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Search" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="newProductTab" text="New product">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="203.0" layoutY="183.0" prefHeight="495.0" prefWidth="685.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label fx:id="setNameLabel" prefHeight="17.0" prefWidth="132.0" text="Name:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="idLabel" text="Id:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="price:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="setIdField" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                    <TextField fx:id="setNameField" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                    <TextField fx:id="setPriceField" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                                    <Label fx:id="setQuantityLabel" text="Quantity:" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="setQuantityField" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                                    <Button fx:id="newProductButton" mnemonicParsing="false" text="New Product" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

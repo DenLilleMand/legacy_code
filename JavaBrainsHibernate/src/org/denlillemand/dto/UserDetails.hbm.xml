@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!-- Generated 04-09-2014 13:36:37 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.denlillemand.dto.UserDetails" table="USERDETAILS">
+        <id name="userId" type="int">
+            <column name="USERID" />
+            <generator class="assigned" />
+        </id>
+       <!--  <property name="userName" type="java.lang.String">
+            <column name="USERNAME" />
+        </property> -->
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0/EN" "http://springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans> 
+		<!-- Tutorial 1-5! 
+	Dette er den, der skal bruges til tutorial 1-5
+	<bean id="triangle" class="tutorial5ApplicationContextAndPropertyInitialization.Triangle">
+		<property name="type" value="Equilateral"></property>
+	
+	</bean> -->
+	
+	<!-- Tutorial 6! -->
+	
+	<!-- dette skal bruges i tutorial 6.  her bliver der declared en type -->
+	<!-- <bean id="triangle" class="tutorial6UsingConstructorInjection.Triangle">
+		<constructor-arg type="int" value="35"/>
+	</bean> -->
+	
+	
+	
+	<!-- det her er måden hvorpå man kan fortælle constructoren hvilket index(parameter) der skal have hvilke value -->
+	<!-- <bean id="triangle" class="tutorial6UsingConstructorInjection.Triangle">
+		<constructor-arg index="0" value="Equilateral"/>
+		<constructor-arg index="1" value="35"/>
+	</bean> -->
+	
+	
+	<!-- Tutorial 7! -->
+	
+	<!-- nu skal man være obs på, at før vi tilføjer noget
+	kode til vores bean med id triangle, så ville vi skulle have
+	kaldt en ting over i java, hvor vi initialisere vores objekt
+	Point ligesom vores Triangle, men fordi Point er inde i vores Triangle
+	klasse kan vi gøre noget smartere, nemlig at refererer de 3 beans point,
+	og initailisere dem igennem en reference til en anden beans id. -->
+	
+	<!-- <bean id="triangle" class="tutorial7InjectingObjects.Triangle">
+		<property name="pointA" ref="zeroPoint"/>
+		<property name="pointB" ref="point1"/>
+		<property name="pointC" ref="point2"/>
+		
+	</bean>
+	
+	<bean id="zeroPoint" class="tutorial7InjectingObjects.Point">
+		<property name="x" value="0" />
+		<property name="y" value ="0" />
+	</bean>
+	
+	<bean id="point1" class="tutorial7InjectingObjects.Point">
+		<property name="x" value="-20" />
+		<property name="y" value ="0" />
+	</bean>
+	
+	<bean id="point2" class="tutorial7InjectingObjects.Point">
+		<property name="x" value="20" />
+		<property name="y" value ="0" />
+	</bean>
+	 -->
+	
+	
+	<!-- 
+	Spring tutorial 8, inner beans, Aliases and idref
+	i den forrige tutorial lavede vi beans for alle klasserne,
+	både vores triangle og for alle vores Point objekter, men det er faktisk
+	ikke nødvendigt så længe at point klassen kun bliver brugt inde i vores
+	triangle klasse, hvilket hedder en inner-bean. Men vi gør det kun for
+	point b og c  -->
+	
+	<bean id="triangle" class="tutorial7InjectingObjects.Triangle">
+		<property name="pointA" ref="zeroPoint"/>
+		
+		<property name="pointB">
+			<bean class="tutorial7InjectingObjects.Point">
+				<property name="x" value="-20" />
+				<property name="y" value ="0" />
+			</bean>
+		</property>
+			
+		<property name="pointC">
+			<bean class="tutorial7InjectingObjects.Point">
+				<property name="x" value="20" />
+				<property name="y" value ="0" />
+			</bean>		
+		</property>
+	
+		
+	</bean>
+	
+	<bean id="zeroPoint" class="tutorial7InjectingObjects.Point">
+		<property name="x" value="0" />
+		<property name="y" value ="0" />
+	</bean>
+	
+	<alias name="triangle" alias="triangle-alias"/>
+	
+	
+</beans>
